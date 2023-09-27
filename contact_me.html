@@ -27,25 +27,30 @@
         <form action="">
             <div>
                 <label>Nama</label>
-                <input type="text" name="" id="">
+                <input type="text" name="name" id="name">
             </div>
             <div>
                 <label>Email</label>
-                <input type="text" name="" id="">
+                <input type="text" name="email" id="email">
             </div>
             <div>
-                <select name="" id="">
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
+                <label>Phone</label>
+                <input type="text" name="phone" id="phone">
+            </div>
+            <div>
+                <select name="subject" id="subject">
+                    <option value="Programing">Programing</option>
+                    <option value="Java Script">Java Script</option>
+                    <option value="Liburan">Liburan</option>
                 </select>
             </div>
             <div>
-                <label for="">Test</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <label for="massage">Massage</label>
+                <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
             </div>
-            <button>Sudah</button>
+            <button type="button" onclick="getData()">Sudah</button>
         </form>
     </div>
+    <script src="asset/js/script.js"></script>
 </body>
 </html>
