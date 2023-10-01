@@ -13,9 +13,9 @@ nav {
 
 .container {
     display: flex;
-    flex-direction: row; /* Mengatur kontainer agar elemen-elemennya tersusun secara horizontal */
-    justify-content: space-around; /* Untuk memberikan jarak sekitar elemen-elemen */
-    align-items: center; /* Mengatur elemen-elemen agar berada di tengah secara vertikal */
+    flex-direction: row; 
+    justify-content: space-around; 
+    align-items: center; 
     border: 5px lightgray;
     background-color: white;
     border-radius: 15px;
@@ -147,16 +147,71 @@ nav {
     color: white;
 }
 
+
+.date-input::-webkit-calendar-picker-indicator {
+    display: none; 
+}
+
+.date-input::-webkit-inner-spin-button {
+    display: none; 
+}
+
+.input-blog-image-group label {
+    cursor: pointer;
+}
+
+.date-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+}
+
+.date-field {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-field label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.tech-container {
+    margin-top: -5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.tech-field {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.tech-field label{
+    font-weight: lighter;
+}
+
+.tech-field input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
 form {
     width: 305px;
     margin: 50px auto;
 }
 
-input , select , textarea {
+input, select, textarea {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #dbdbdbdb;
+    border: 1px solid #dbdbdb;
     margin-top: 5px;
 }
 
@@ -165,13 +220,47 @@ textarea {
     height: 100px;
 }
 
-form div{
+form div {
     margin-top: 10px;
 }
 
 form label {
     font-weight: bold;
 }
+
+
+
+.input-blog-image-grup label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #dbdbdbdb;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.input-blog-image-grup label p {
+    margin: auto;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.input-blog-image-grup label img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+
+.input-blog-image-grup input[type="file"] {
+    display: none;
+}
+
 
 button {
     background-color: black;
@@ -187,4 +276,76 @@ button {
 button:hover {
     background-color: orangered;
     color: white;
+}
+
+.blog-container {
+    display: flex;
+    background-color: #dfdfdf7a;
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+}
+
+
+.blog-post {
+    width: 300px; 
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post img {
+    max-width: 300px;
+    height: auto;
+}
+
+
+.blog-post h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+.blog-post .date {
+    font-size: 14px;
+    color: #888;
+    margin: 5px 0;
+}
+
+
+.blog-post p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+
+.blog-post .btn-group {
+    display: flex;
+    align-items: center;
+}
+
+.blog-post .btn-group button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.blog-post .btn-edit {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.blog-post .btn-delete {
+    margin-left: 15px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
 }
