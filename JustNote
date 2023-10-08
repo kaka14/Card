@@ -1,0 +1,24 @@
+// const nomer = [1,2,3,4,5];
+// ============================
+// nomer.forEach((data) => {
+//     console.log(data)
+// })
+// ===============================
+// nomer.map(function (data, index){
+//     console.log(data * 2)
+// }) 
+// ==========================
+// const fil = nomer.filter((nomer) => nomer % 2 !==0)
+// console.log(fil)
+// ========================
+// const reduce = nomer.reduce((prev, current)=> prev + current)
+// console.log(reduce)
+// =============================
+// function hello() {
+//     return "hello world"
+// }
+// function sayHello(name, callback) {
+//     return name + callback()
+// }
+// console.log(sayHello("Kaka ", hello));
+// ==================================

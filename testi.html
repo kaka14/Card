@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Blog</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <img src="asset/img/logo.png" alt="">
+                <li>
+                    <a class="item-collapse" href="./index.html">Home</a> 
+                </li>
+                <li>
+                    <a class="item-collapse" href="./blog.html">Blog</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a class="item-collapse" href="./contact_me.html">Contact Me</a>
+        </div>
+        <div class="nav-right" id="barsmenu">
+            <button class="hamburger-button" onclick="openHamburger()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="./index.html">Home</a> 
+        <a href="./blog.html"  class="hamburger-active">Blog</a> 
+        <a href="./contact_me.html">Contact Me</a>
+    </div>
+    <div class="testi">
+        <section>
+            <button onclick="showTestimonial()">All</button>
+            <button onclick="filterTestimonial(1)">1 Star</button>
+            <button onclick="filterTestimonial(2)">2 Star</button>
+            <button onclick="filterTestimonial(3)">3 Star</button>
+            <button onclick="filterTestimonial(4)">4 Star</button>
+            <button onclick="filterTestimonial(5)">5 Star</button>
+        </section>
+    </div>`
+    <div class="blog-container" id="testimoni">
+        <div class="blog-post">
+            <img src="./asset/img/fb.png" alt="Gambar Blog">
+            <h2>Judul Blog</h2>
+            <p class="date">Tanggal: 01 Januari 2023</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis ligula sit amet magna
+                vulputate, vel vehicula odio aliquam.
+            </p>
+        </div>
+    </div>
+    <script src="./asset/js/button.js"></script>
+    <script src="./asset/js/testi.js"></script>
+</body>
+</html>

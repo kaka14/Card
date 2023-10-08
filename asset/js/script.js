@@ -24,3 +24,4 @@ function getData() {
 
     alert("Email Berhasil Di Kirim");
 }
+

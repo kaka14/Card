@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./asset/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>card</title>
 </head>
 <body>
@@ -12,36 +13,52 @@
             <ul>
                 <img src="asset/img/logo.png" alt="">
                 <li>
-                    <a href="./index.html">Home</a> 
+                    <a class="item-collapse" href="./index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="./blog.html">Blog</a> 
+                    <a class="item-collapse" href="./blog.html">Blog</a> 
                 </li>
             </ul>
         </div>
         <div class="nav-right">
-            <a href="./contact_me.html">Contact Me</a>
+            <a class="item-collapse" href="./contact_me.html">Contact Me</a>
+        </div>
+        <div class="nav-right" id="barsmenu">
+            <button class="hamburger-button" onclick="openHamburger()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </nav>
-    <div class="container">
-        <div class="paragrap">
-            <h1>Hey welcome to my hut</h1>
-            <p>Saya adalah seorang programmer pemula yang telah berhasil menyelesaikan pendidikan di SMK Budi Luhur. Selama masa studi saya, saya terlibat dalam berbagai proyek pengembangan perangkat lunak dan mulai merasakan ketertarikan yang kuat terhadap dunia pemrograman. Salah satu bahasa pemrograman yang telah saya kuasai selama waktu di SMK adalah PHP. Saya telah mengerjakan beberapa proyek menggunakan PHP, termasuk pembuatan website sederhana dan aplikasi berbasis web. </p>
-            <p>Saat ini, saya terus memperdalam pemahaman saya tentang konsep-konsep dasar JavaScript seperti variabel, fungsi. Saya juga belajar tentang kerangka kerja (framework) JavaScript seperti React untuk memahami cara membangun aplikasi web yang lebih kompleks dan dinamis.</p>
-            <button href="./contact_me.html">Contact</button> <a target="_blank" href="https://drive.google.com/file/d/1SfBdNLWpUwh30w2FWKjRSf8kOtHRmirW/view?usp=sharing"> Download <img src="./asset/img/download.png" alt="unduh"></a>
-            <div class="logo">
-                <a  target="_blank" href="https://github.com/kaka14?tab=repositories" ><img src="./asset/img/git.png" alt="Git-Hub"></a>
-                <a  target="_blank" href="https://www.instagram.com/kaka.124_3/" ><img src="./asset/img/ig.png" alt="instagram"></a>
-                <a  target="_blank" href="facebook"><img src="./asset/img/fb.png" alt="facebook"></a>
-                <a  target="_blank" href="https://www.tiktok.com/@kazx_01"><img src="./asset/img/tt.png" alt="Tiktok"></a>
-            </div>
-        </div>
 
-        <div class="card">
-            <img src="./asset/img/img.jpg" alt="Profil">
-            <h1>Kaka</h1>
-            <p>Fullstack Programer</p>
-        </div>
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="./index.html" class="hamburger-active">Home</a> 
+        <a href="./blog.html">Blog</a> 
+        <a href="./contact_me.html">Contact Me</a>
     </div>
+
+    <div class="container">
+        <section>
+            <div class="paragrap">
+                <h1>Hey welcome to my hut</h1>
+                <p>Saya adalah seorang programmer pemula yang telah berhasil menyelesaikan pendidikan di SMK Budi Luhur. Selama masa studi saya, saya terlibat dalam berbagai proyek pengembangan perangkat lunak dan mulai merasakan ketertarikan yang kuat terhadap dunia pemrograman. Salah satu bahasa pemrograman yang telah saya kuasai selama waktu di SMK adalah PHP. Saya telah mengerjakan beberapa proyek menggunakan PHP, termasuk pembuatan website sederhana dan aplikasi berbasis web. </p>
+                <p>Saat ini, saya terus memperdalam pemahaman saya tentang konsep-konsep dasar JavaScript seperti variabel, fungsi. Saya juga belajar tentang kerangka kerja (framework) JavaScript seperti React untuk memahami cara membangun aplikasi web yang lebih kompleks dan dinamis.</p>
+                <button href="./contact_me.html">Contact</button> <a target="_blank" href="https://drive.google.com/file/d/1SfBdNLWpUwh30w2FWKjRSf8kOtHRmirW/view?usp=sharing"> Download <img src="./asset/img/download.png" alt="unduh"></a>
+                <div class="logo">
+                    <a  target="_blank" href="https://github.com/kaka14?tab=repositories" ><img src="./asset/img/git.png" alt="Git-Hub"></a>
+                    <a  target="_blank" href="https://www.instagram.com/kaka.124_3/" ><img src="./asset/img/ig.png" alt="instagram"></a>
+                    <a  target="_blank" href="facebook"><img src="./asset/img/fb.png" alt="facebook"></a>
+                    <a  target="_blank" href="https://www.tiktok.com/@kazx_01"><img src="./asset/img/tt.png" alt="Tiktok"></a>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <img src="./asset/img/img.jpg" alt="Profil">
+                    <h1>Kaka</h1>
+                    <p>Fullstack Programer</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./asset/js/button.js"></script>
 </body>
 </html>

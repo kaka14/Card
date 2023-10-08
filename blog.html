@@ -11,19 +11,30 @@
     <nav>
         <div class="nav-left">
             <ul>
-                <img src="./asset/img/logo.png" alt="">
+                <img src="asset/img/logo.png" alt="">
                 <li>
-                    <a href="./index.html">Home</a> 
+                    <a class="item-collapse" href="./index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="#">Blog</a> 
+                    <a class="item-collapse" href="./blog.html">Blog</a> 
                 </li>
             </ul>
         </div>
         <div class="nav-right">
-            <a href="#">Contact Me</a>
+            <a class="item-collapse" href="./contact_me.html">Contact Me</a>
+        </div>
+        <div class="nav-right" id="barsmenu">
+            <button class="hamburger-button" onclick="openHamburger()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </nav>
+
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="./index.html">Home</a> 
+        <a href="./blog.html"  class="hamburger-active">Blog</a> 
+        <a href="./contact_me.html">Contact Me</a>
+    </div>
     <div>
         <form onsubmit="submitData(event)">
             <div>
@@ -90,11 +101,13 @@
             <div class="btn-group">
                 <button class="btn-edit">Edit</button>
                 <button class="btn-delete">Hapus</button>
+                <p class="minute">test</p>
             </div>
         </div>
     </div>
 
 
     <script src="asset/js/blog.js"></script>
+    <script src="./asset/js/button.js"></script>
 </body>
 </html>

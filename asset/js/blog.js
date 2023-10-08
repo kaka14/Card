@@ -1,7 +1,5 @@
 const data = []
 
-
-
 function submitData(e) {
     
     e.preventDefault()
@@ -20,13 +18,7 @@ function submitData(e) {
     let htmlChecked= html.checked;
     let phpChecked = php.checked;
     let pyChecked = py.checked;
-
-    
-    const today = new Date();
-    const day = today.getDate();
-    const month = today.toLocaleString('default', { month: 'long' });
-    const year = today.getFullYear();
-    const formattedToday = `${day} ${month} ${year}`;
+    let month = monthDistance(start, end);
 
 
     image = URL.createObjectURL(image[0])
@@ -41,7 +33,8 @@ function submitData(e) {
         htmlChecked,
         phpChecked,
         pyChecked,
-        postedAt: formattedToday,
+        month,
+        postedAt : new Date(),
         author: "Kaka"
     }
 
@@ -49,8 +42,6 @@ function submitData(e) {
     
     renderBlog()
 }
-
-
 
 function renderBlog() {
 
@@ -75,8 +66,8 @@ function renderBlog() {
        document.getElementById("blog").innerHTML += `
        <div class="blog-post">
        <img src="${data[i].image}" alt="Gambar Blog">
-       <h2>${data[i].title}</h2>
-       <p class="date">${data[i].postedAt} | ${data[i].author}</p>
+       <h2><a target= "_blank" href="blog_content.html">${data[i].title}</a></h2>
+       <p class="date">${data[i].month} | ${data[i].author}</p>
        <p>
         ${data[i].content}
        </p>
@@ -86,6 +77,9 @@ function renderBlog() {
        <div class="btn-group">
            <button class="btn-edit">Edit</button>
            <button class="btn-delete">Hapus</button>
+           <div style="float:right; margin 10px">
+            <p class ="minute" style="font-size: 15px; color:grey">${getDuration(data[i].postedAt)}</p>
+           </div>
        </div>
    </div>
         `;
@@ -93,3 +87,58 @@ function renderBlog() {
 }
 
 
+function getTime(time){
+    let year = time.getFullYear()
+    let month = time.getMonth()
+    let hour = time.getHours()
+    let date = time.getDate()
+    let minute = time.getMinutes()
+    const nameMonth = ["Janurary","February","March","April","May","June","July","August","September","Ooctober","November","December"]
+
+    return `${date} ${nameMonth[month]} ${year} ${hour}:${minute} WIB`
+}
+
+function monthDistance(date1, date2) {
+    const d1 = new Date(date1);
+    const d2 = new Date(date2);
+
+    const monthsApart = (d2.getFullYear() - d1.getFullYear()) * 12 + (d2.getMonth() - d1.getMonth());
+
+    if (monthsApart < 1) {
+        return "Just this month";
+    } else {
+        return monthsApart + " Months";
+    }
+}
+
+
+
+function getDuration(time) {
+    const timeNow = new Date()
+    const timePost = new Date(time)
+    const distance = timeNow - timePost
+
+    const dayDistance = Math.floor(distance / (24 * 60 * 60 * 1000))
+    if (dayDistance > 0){
+        return dayDistance + " Day Ago"
+    }else {
+        const hourDistance = Math.floor(distance / (60 * 60 * 1000))
+        if (hourDistance > 0){
+            return hourDistance + " Hour Ago"
+        } else {
+            const minuteDistance = Math.floor(distance / (60 * 1000))
+            if (minuteDistance > 0){
+                return minuteDistance + " Minute Ago"
+            }else {
+                const secondDistance = Math.floor(distance / (1000))
+                if (secondDistance > 0){
+                    return secondDistance + " Second Ago"
+                }else {
+                    return "Just Now"
+                }
+        }
+    }
+}
+}
+
+setInterval(renderBlog, 1000)
